@@ -1,56 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Bảng giới thiệu nhóm</title>
-  <style>
-    table {
-      width: 70%;
-      border-collapse: collapse;
-      margin: 20px auto;
-      font-family: Arial;
-    }
-    th, td {
-      border: 1px solid #333;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    img{
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Trang nhóm và thời khóa biểu</title>
+
+<style>
+body{
+  font-family: Arial;
+  text-align:center;
+}
+
+button{
+  padding:10px 20px;
+  margin:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+table{
+  border-collapse: collapse;
+  width:80%;
+  margin:auto;
+}
+
+th,td{
+  border:1px solid #333;
+  padding:8px;
+  text-align:center;
+}
+
+th{
+  background:#f2f2f2;
+}
+
+img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+}
+
+.section{
+  display:none;
+  margin-top:20px;
+}
+</style>
 </head>
+
 <body>
 
-<h2 style="text-align:center;">Giới thiệu nhóm</h2>
+<h2>📌 Trang thông tin</h2>
 
-<table>
-  <tr>
-    <th>Ảnh</th>
-    <th>Họ và tên</th>
-    <th>Chức vụ</th>
-    <th>Giới thiệu</th>
-  </tr>
+<button onclick="showSection('group')">Giới thiệu nhóm</button>
+<button onclick="showSection('schedule')">Thời khóa biểu</button>
 
-  <tr>
-    <td><img src="https://via.placeholder.com/80"></td>
-    <td>Nguyễn Hồ Minh Khôi</td>
-    <td>Nhóm trưởng</td>
-    <td>thích màu xanh, chủng tộc: Môn-gô-lô-it, sống ở Việt Nam thích cờ đỏ sao vàng và ăn phở</td>
-  </tr>
+<!-- GIỚI THIỆU NHÓM -->
+<div id="group" class="section">
+  <h3>👥 Giới thiệu nhóm</h3>
+  <table>
+  <tr>
+    <th>Ảnh</th>
+    <th>Họ và tên</th>
+    <th>Chức vụ</th>
+    <th>Giới thiệu</th>
+  </tr>
 
-  <tr>
-    <td><img src="https://via.placeholder.com/80"></td>
-    <td>Minh Vũ</td>
-    <td>Thành viên</td>
-    <td>không biết</td>
-  </tr>
+  <tr>
+    <td><img src="https://via.placeholder.com/80"></td>
+    <td>Nguyễn Hồ Minh Khôi</td>
+    <td>Nhóm trưởng</td>
+    <td>thích màu xanh, chủng tộc: Môn-gô-lô-it, sống ở Việt Nam thích cờ đỏ sao vàng và ăn phở</td>
+  </tr>
 
-</table>
+  <tr>
+    <td><img src="https://via.placeholder.com/80"></td>
+    <td>Minh Vũ</td>
+    <td>Thành viên</td>
+    <td>không biết</td>
+  </tr>
+  </table>
+</div>
+
+<!-- THỜI KHÓA BIỂU -->
+<div id="schedule" class="section">
+  <h3>📚 Thời khóa biểu</h3>
+
+  <table>
+    <tr>
+      <th>Thứ</th>
+      <th>Tiết 1</th>
+      <th>Tiết 2</th>
+      <th>Tiết 3</th>
+      <th>Tiết 4</th>
+      <th>Tiết 5</th>
+    </tr>
+
+    <tr>
+      <td>Thứ 2</td>
+      <td>sh</td>
+      <td>sh</td>
+      <td>sinh</td>
+      <td>lí</td>
+      <td>lí</td>
+    </tr>
+
+    <tr>
+      <td>Thứ 3</td>
+      <td>hóa</td>
+      <td>anh</td>
+      <td>Văn</td>
+      <td>hoá</td>
+      <td>td</td>
+    </tr>
+
+    <tr>
+      <td>Thứ 4</td>
+      <td>sử</td>
+      <td>sinh</td>
+      <td>toán</td>
+      <td>Toán</td>
+      <td>tc</td>
+    </tr>
+
+    <tr>
+      <td>Thứ 5</td>
+      <td>Văn</td>
+      <td>Toán</td>
+      <td>Anh</td>
+      <td>Sinh</td>
+      <td>Thể dục</td>
+    </tr>
+
+    <tr>
+      <td>Thứ 6</td>
+      <td>Hóa</td>
+      <td>tn</td>
+      <td>gdtc</td>
+      <td>gdtc</td>
+      <td>văn</td>
+    </tr>
+
+    <tr>
+      <td>Thứ 7</td>
+      <td>toán</td>
+      <td>toán</td>
+      <td>văn</td>
+      <td>văn</td>
+      <td>Nghỉ</td>
+    </tr>
+  </table>
+</div>
+
+<script>
+function showSection(id){
+  document.getElementById("group").style.display="none";
+  document.getElementById("schedule").style.display="none";
+  document.getElementById(id).style.display="block";
+}
+</script>
+
 </body>
 </html>
+
