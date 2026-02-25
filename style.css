@@ -16,10 +16,13 @@
     color: white;
 }
 
-.menu{
-    flex: 5%;
-    background: #333;
-    color: white;
+.menu a{
+    color: white;         
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: yellow;        
 }
 
 .content{
