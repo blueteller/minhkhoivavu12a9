@@ -2,6 +2,8 @@
     font-family: Arial;
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
 }
 
 .container{
@@ -12,24 +14,22 @@
 
 .header{
     flex: 15%;
-    background: black;
-    color: green;
 }
 
 .menu{
     flex: 5%;
-    background-color: darkgray;
-    color: white;
     display: flex;
 }
 
 .menu a{
     padding: 15px 20px;
+    text-decoration: none;
+    color: white;
 }
 
 .menu a:hover{
-    background-color: lightgray;
-    color: black;
+    background-color: #333;
+    color: yellow;
 }
 
 .content{
@@ -38,6 +38,4 @@
 
 .footer{
     flex: 10%;
-    background: black;
-    color: blue;
 }
