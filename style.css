@@ -16,13 +16,20 @@
     color: green;
 }
 
+.menu{
+    flex: 5%;
+    background-color: darkgray;
+    color: white;
+    display: flex;
+}
+
 .menu a{
-    color: black;         
-    text-decoration: none;
+    padding: 15px 20px;
 }
 
 .menu a:hover{
-    color: yellow;        
+    background-color: lightgray;
+    color: black;
 }
 
 .content{
