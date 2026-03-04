@@ -17,6 +17,8 @@ body{
 
 .header{
     flex: 15%;
+    background: url("logo.png") center / 100%;
+    aspect-ratio: 6 / 1;
 }
 
 .menu{
