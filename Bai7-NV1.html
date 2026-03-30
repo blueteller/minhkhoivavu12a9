@@ -2,18 +2,61 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Biểu mẫu đơn giản</title>
+    <title>Góp ý thư viện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .form-box {
+            width: 600px;
+            border: 2px solid #999;
+            padding: 15px;
+            background-color: #e9e9e9;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 250px;
+        }
+        textarea {
+            width: 400px;
+            height: 120px;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>Nhập thông tin</h2>
+<div class="form-box">
+    <h2>Đóng góp ý kiến cho thư viện của nhà trường</h2>
 
-    <form action="#" method="post">
-        <label for="name">Họ và tên:</label><br>
-        <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn"><br><br>
+    <h3>1. Thông tin về người góp ý</h3>
+    <div class="form-group">
+        <label>Họ và tên:</label>
+        <input type="text" name="hoten">
+    </div>
 
-        <input type="submit" value="Gửi">
-    </form>
+    <div class="form-group">
+        <label>Địa chỉ email:</label>
+        <input type="email" name="email">
+    </div>
 
+    <h3>2. Đóng góp ý kiến</h3>
+    <div class="form-group">
+        <label>Ý kiến đóng góp:</label><br>
+        <textarea name="ykien"></textarea>
+    </div>
+</div>
 </body>
 </html>
