@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí hội thao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-box {
+            width: 400px;
+            border: 2px solid #999;
+            padding: 15px;
+            background-color: #f2f2f2;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 110px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 230px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h3>Đăng kí tham gia Hội thao</h3>
+
+    <div class="form-group">
+        <label>Họ và tên:</label>
+        <input type="text" name="hoten">
+    </div>
+
+    <div class="form-group">
+        <label>Địa chỉ email:</label>
+        <input type="email" name="email">
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <input type="radio" name="lop" value="10"> Lớp 10
+        <input type="radio" name="lop" value="11"> Lớp 11
+        <input type="radio" name="lop" value="12"> Lớp 12
+    </div>
+
+    <div class="form-group">
+        <p><strong>Tham dự môn:</strong></p>
+        <input type="checkbox" name="mon" value="bongban"> Bóng bàn<br>
+        <input type="checkbox" name="mon" value="caulong"> Cầu lông<br>
+        <input type="checkbox" name="mon" value="covua"> Cờ vua
+    </div>
+
+    <div class="buttons">
+        <button type="submit">Đăng kí</button>
+        <button type="reset">Hủy bỏ</button>
+    </div>
+</div>
+</body>
+</html>
