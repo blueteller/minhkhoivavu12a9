@@ -2,61 +2,32 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Góp ý thư viện</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        .form-box {
-            width: 600px;
-            border: 2px solid #999;
-            padding: 15px;
-            background-color: #e9e9e9;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        h3 {
-            margin-bottom: 5px;
-        }
-        .form-group {
-            margin-bottom: 10px;
-        }
-        label {
-            display: inline-block;
-            width: 120px;
-        }
-        input[type="text"], input[type="email"] {
-            width: 250px;
-        }
-        textarea {
-            width: 400px;
-            height: 120px;
-        }
-    </style>
+    <title>Đóng góp ý kiến</title>
 </head>
 <body>
 
-<div class="form-box">
     <h2>Đóng góp ý kiến cho thư viện của nhà trường</h2>
 
-    <h3>1. Thông tin về người góp ý</h3>
-    <div class="form-group">
-        <label>Họ và tên:</label>
-        <input type="text" name="hoten">
-    </div>
+    <form action="#">
+        <h3>1.Thông tin về người góp ý</h3>
+        
+        <div>
+            <label for="fullname">Họ và tên: </label>
+            <input type="text" id="fullname" name="fullname">
+        </div>
 
-    <div class="form-group">
-        <label>Địa chỉ email:</label>
-        <input type="email" name="email">
-    </div>
+        <div>
+            <label for="email">Địa chỉ email: </label>
+            <input type="email" id="email" name="email">
+        </div>
 
-    <h3>2. Đóng góp ý kiến</h3>
-    <div class="form-group">
-        <label>Ý kiến đóng góp:</label><br>
-        <textarea name="ykien"></textarea>
-    </div>
-</div>
+        <h3>2.Đóng góp ý kiến</h3>
+
+        <div style="display: flex; align-items: flex-start;">
+            <label for="feedback">Ý kiến đóng góp: </label>
+            <textarea id="feedback" name="feedback" rows="6" cols="50"></textarea>
+        </div>
+    </form>
+
 </body>
 </html>
