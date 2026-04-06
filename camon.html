@@ -8,11 +8,27 @@
 
     <h1>Gửi ý kiến thành công!</h1>
     
-    <p>Cảm ơn bạn đã đóng góp ý kiến cho thư viện của nhà trường.</p>
+    <!-- Đây là nơi tên và ý kiến sẽ hiện ra -->
+    <p>Chào bạn <b id="hien_ten">...</b>,</p>
+    <p>Cảm ơn bạn đã đóng góp ý kiến: "<i id="hien_ykien">...</i>" cho thư viện của nhà trường.</p>
+    
     <p>Chúng tôi sẽ ghi nhận và phản hồi sớm nhất có thể.</p>
     
     <hr>
     <a href="Bai7-NV1.html">Quay lại trang đóng góp</a>
+
+    <script>
+        // Đoạn code nhỏ này giúp lấy thông tin từ thanh địa chỉ (URL)
+        const params = new URLSearchParams(window.location.search);
+        
+        // Lấy tên và ý kiến dựa trên thuộc tính "name" ở file gốc
+        const ten = params.get('ho_ten');
+        const ykien = params.get('y_kien');
+
+        // Hiển thị ra màn hình
+        if(ten) document.getElementById('hien_ten').innerText = ten;
+        if(ykien) document.getElementById('hien_ykien').innerText = ykien;
+    </script>
 
 </body>
 </html>
