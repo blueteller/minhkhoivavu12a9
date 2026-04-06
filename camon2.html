@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác nhận đăng ký Hội thao</title>
+</head>
+<body>
+
+    <h1>Đăng ký thành công!</h1>
+    
+    <p>Chúc mừng bạn <b id="hien_ten">...</b> - Học sinh lớp <b id="hien_lop">...</b> đã đăng ký tham gia Hội thao.</p>
+    
+    <p>Các môn bạn đã chọn: <i id="hien_mon">...</i></p>
+    
+    <p>Thông báo chi tiết về lịch thi đấu sẽ được gửi đến email của bạn sớm nhất.</p>
+    
+    <hr>
+    <a href="hoithao.html">Quay lại trang đăng ký</a>
+
+    <script>
+        // Lấy dữ liệu từ thanh địa chỉ (URL)
+        const params = new URLSearchParams(window.location.search);
+        
+        // Hiển thị tên
+        const ten = params.get('hoten');
+        if(ten) document.getElementById('hien_ten').innerText = ten;
+
+        // Hiển thị lớp
+        const lop = params.get('lop');
+        if(lop) document.getElementById('hien_lop').innerText = lop;
+
+        // Hiển thị các môn (vì checkbox có thể chọn nhiều môn)
+        const cacMon = params.getAll('mon'); 
+        if(cacMon.length > 0) {
+            // Chuyển đổi mã (bongban, caulong...) sang tiếng Việt cho đẹp
+            const tenMonTiengViet = cacMon.map(m => {
+                if(m === 'bongban') return 'Bóng bàn';
+                if(m === 'caulong') return 'Cầu lông';
+                if(m === 'covua') return 'Cờ vua';
+                return m;
+            });
+            document.getElementById('hien_mon').innerText = tenMonTiengViet.join(', ');
+        } else {
+            document.getElementById('hien_mon').innerText = "Chưa chọn môn nào";
+        }
+    </script>
+
+</body>
+</html>
